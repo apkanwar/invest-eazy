@@ -2,30 +2,62 @@
   "properties": [
     {
       "id": 1,
-      "name": "London Apartments",
-      "description": "Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.",
-      "address": "7935 Kennedy Rd S, Brampton, ON L6W 0A2",
+      "name": "Welland Vale Project",
+      "description": "Welland Vale is a 3 home luxury development project currently being managed by heartwood.",
+      "address": "St. Catharines, ON",
       "type": "Lending",
       "investmentNeeded": 100000,
       "investmentGained": 25000,
-      "image": "hotel.webp",
-      "detailedDescription": "Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor. \n\n Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.",
-      "annualYeild": 10.5,
-      "targetIRR": 10.5,
-      "antTerm": 2.5,
-      "avgLTV": 62.2,
+      "image": "wellandVale.png",
+      "detailedDescription": "Participate in the ownership of a newly constructed 2-unit multifamily homes in St. Catharines, ON. \n\n Participate in the ownership of a newly constructed 2-unit multifamily homes in St. Catharines, ON. Participate in the ownership of a newly constructed 2-unit multifamily homes in St. Catharines, ON. Participate in the ownership of a newly constructed 2-unit multifamily homes in St. Catharines, ON.",
+      "realizedMOIC": 2.0,
+      "realizedIRR": 66,
+      "projectTimeline": 2.1,
+      "projectROIC": 139,
       "highlights": [
-        "Features 19 residential units comprising studios, jr. one-bedrooms, one-bedrooms and two-bedrooms apartments.",
-        "As of this writing, all units are fully occupied. Sought-after building in a popular location suggests consistent occupancy.",
-        "Constructed in 1926. First and only renovation conducted in 2017 by Haeccity Studio Architecture.",
-        "Renovations aimed to preserve the heritage elements, including hardwood floors in the hallways and signature fixtures.",
-        "Plaster on lathe, inlaid oak flooring, cast iron tubs and wood panel doors were all refurbished in place. Damaged areas were removed, stored and upcycled into new installations.",
-        "Preserved heritage elements include cast iron furnace doors, single-hung window weights, antique lock sets, brass doorknobs and doorbells."
+        "Features 3 residential units comprising of one bedroom studio houses.",
+        "Sought-after building in a popular location suggests consistent occupancy.",
+        "Constructed in 2020. Constructed by 76 Contruction Management",
+        "Aimed to be built for the modern small homes sought out for new home owners",
+        "Plaster on lathe, inlaid oak flooring, cast iron tubs and wood panel doors were all installed.",
+        "Built with both stone and wood to have a unique design for these properties"
       ],
       "locationScore": {
         "transit": 80,
-        "walking": 80,
-        "biking": 82
+        "walking": 85,
+        "biking": 94
+      },
+      "investmentType": {
+        "type": "Core",
+        "detailedDescription": "Participate in the ownership of a newly constructed plaza in Simcoe, ON. \n\n Participate in the ownership of a newly constructed plaza in Simcoe, ON. Participate in the ownership of a newly constructed plaza in Simcoe, ON. Participate in the ownership of a newly constructed plaza in Simcoe, ON. Participate in the ownership of a newly constructed plaza in Simcoe, ON.",
+        "target": "For investors looking to generate stable income with very low risk."
+      }
+    },
+    {
+      "id": 3,
+      "name": "Cedar Park Plaza",
+      "description": "The Cedar Park Plaza is a ~58,000 sq. ft commercial development consisting of 35+ retail stores & offices.",
+      "address": "Simcoe, ON",
+      "type": "Lending",
+      "investmentNeeded": 100000,
+      "investmentGained": 35000,
+      "image": "cedarPark.jpg",
+      "detailedDescription": "Participate in the ownership of a newly constructed homes in Pelham, ON. \n\n Participate in the ownership of a newly constructed homes in Pelham, ON. Participate in the ownership of a newly constructed homes in Pelham, ON. Participate in the ownership of a newly constructed homes in Pelham, ON. Participate in the ownership of a newly constructed homes in Pelham, ON.",
+      "realizedMOIC": 2.2,
+      "realizedIRR": 71,
+      "projectTimeline": 3.4,
+      "projectROIC": 241,
+      "highlights": [
+        "Features 10 commercial units for sale in 58,000sq. ft. lot",
+        "Sought-after building in a popular location suggests consistent occupancy.",
+        "Started Constructed in 2019. Constructed by 76 Contruction Management",
+        "Aimed to be built for new homes in the area that need business to follow",
+        "Consists of office spaces to businesses to open, but also large building for stores"
+      ],
+      "locationScore": {
+        "transit": 90,
+        "walking": 81,
+        "biking": 88
       },
       "investmentType": {
         "type": "Core",
@@ -35,69 +67,81 @@
     },
     {
       "id": 2,
-      "name": "Brampton Apartments",
-      "description": "Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.",
-      "address": "7935 Kennedy Rd S, Brampton, ON L6W 0A2",
-      "type": "Acquisitions",
-      "investmentNeeded": 400000,
-      "investmentGained": 60000,
-      "image": "hotel.webp",
+      "name": "River Road Estates",
+      "description": "The Pelham Development is a 2 homes luxury development led by the Heartwood team. All homes were Pre-sold at $1.8M.",
+      "address": "Pelham, ON",
+      "type": "Lending",
+      "investmentNeeded": 100000,
+      "investmentGained": 65000,
+      "image": "riverRoad.png",
       "detailedDescription": "Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor. \n\n Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.",
-      "annualYeild": 10.5,
-      "targetIRR": 10.5,
-      "antTerm": 2.5,
-      "avgLTV": 62.2,
+      "realizedMOIC": 1.9,
+      "realizedIRR": 35,
+      "projectTimeline": 3.8,
+      "projectROIC": 133,
       "highlights": [
-        "Features 19 residential units comprising studios, jr. one-bedrooms, one-bedrooms and two-bedrooms apartments.",
-        "As of this writing, all units are fully occupied. Sought-after building in a popular location suggests consistent occupancy.",
-        "Constructed in 1926. First and only renovation conducted in 2017 by Haeccity Studio Architecture.",
-        "Renovations aimed to preserve the heritage elements, including hardwood floors in the hallways and signature fixtures.",
-        "Plaster on lathe, inlaid oak flooring, cast iron tubs and wood panel doors were all refurbished in place. Damaged areas were removed, stored and upcycled into new installations.",
-        "Preserved heritage elements include cast iron furnace doors, single-hung window weights, antique lock sets, brass doorknobs and doorbells."
+        "Features 2 pre sold luxury residentails homes featuring a 2 bedroom 1 level house",
+        "Isolated homes, not near any motorways with large property value",
+        "Started Constructed in 2020. Constructed by 76 Contruction Management",
+        "Aimed to be built for owners that need a place away from the city",
+        "Consists to large open areas in front and behind the house for various uses",
+        "Containes natural terrain surrounding the house to build a natural feel"
       ],
       "locationScore": {
-        "transit": 60,
-        "walking": 70,
-        "biking": 85
+        "transit": 70,
+        "walking": 89,
+        "biking": 89
       },
       "investmentType": {
         "type": "Core",
         "define": "A Core investment usually requires very little management from owners and are usually occupied with tenants on long-term leases. Core investments are typically acquired and held. This type of investing is as close as one can get to passive investing when buying properties directly.",
         "target": "For investors looking to generate stable income with very low risk."
       }
-    },
+    }
+  ],
+  "users": [
     {
-      "id": 3,
-      "name": "Toronto Apartments",
-      "description": "Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.",
-      "address": "7935 Kennedy Rd S, Brampton, ON L6W 0A2",
-      "type": "Acquisitions",
-      "investmentNeeded": 250000,
-      "investmentGained": 150000,
-      "image": "hotel.webp",
-      "detailedDescription": "Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor. \n\n Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.Participate in the ownership of a newly renovated and fully occupied 19-unit multifamily apartment building in the Vancouver-Broadway Corridor.",
-      "annualYeild": 10.5,
-      "targetIRR": 10.5,
-      "antTerm": 2.5,
-      "avgLTV": 62.2,
-      "highlights": [
-        "Features 19 residential units comprising studios, jr. one-bedrooms, one-bedrooms and two-bedrooms apartments.",
-        "As of this writing, all units are fully occupied. Sought-after building in a popular location suggests consistent occupancy.",
-        "Constructed in 1926. First and only renovation conducted in 2017 by Haeccity Studio Architecture.",
-        "Renovations aimed to preserve the heritage elements, including hardwood floors in the hallways and signature fixtures.",
-        "Plaster on lathe, inlaid oak flooring, cast iron tubs and wood panel doors were all refurbished in place. Damaged areas were removed, stored and upcycled into new installations.",
-        "Preserved heritage elements include cast iron furnace doors, single-hung window weights, antique lock sets, brass doorknobs and doorbells."
+      "email": "apkanwar@gmail.com",
+      "password": "password",
+      "name": "Atinderpaul Kanwar",
+      "phoneNumber": "123-456-7890",
+      "memberSince": "01/12/2022",
+      "verfied": true,
+      "conAgreement": "aKanwar_CA.pdf",
+      "susQuestions": "aKanwar_SQ.pdf",
+      "wallet": 100,
+      "activity": [
+        {
+          "id": "fd00001",
+          "type": "Fund Deposit",
+          "date": "17/12/2022",
+          "amount": 200.00
+        },
+        {
+          "id": "pi00001",
+          "type": "Property Investment",
+          "date": "18/12/2022",
+          "amount": 100.00
+        }
       ],
-      "locationScore": {
-        "transit": 50,
-        "walking": 90,
-        "biking": 95
-      },
-      "investmentType": {
-        "type": "Core",
-        "define": "A Core investment usually requires very little management from owners and are usually occupied with tenants on long-term leases. Core investments are typically acquired and held. This type of investing is as close as one can get to passive investing when buying properties directly.",
-        "target": "For investors looking to generate stable income with very low risk."
-      }
+      "bankAccount": [
+        {
+          "bankName": "TD Canada Trust",
+          "cardNumber": "0100 0100 0100 0100",
+          "cvc": "17/12/2022",
+          "holderName": "Atinderpaul K",
+          "expiryDate": "01/2029"
+        }
+      ],
+      "portfolio": [
+        {
+          "propertyID": 1,
+          "invested": 100.00,
+          "offeringMemo": "aKanwar_P1_OM.pdf",
+          "subAgreement": "aKanwar_P1_SA.pdf",
+          "totalEarned": 15.01
+        }
+      ]
     }
   ]
 }

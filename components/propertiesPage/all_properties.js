@@ -1,9 +1,22 @@
 import styles from '../../styles/all_properties.module.css'
 import Image from 'next/image'
 import HotelImage from '../../public/hotel.webp'
-import Link from 'next/link'
+import { getProperties } from '../../services/properties.mjs'
+import { useEffect, useState } from 'react'
 
-export default function AllProperties({ data }) {
+
+function AllProperties() {
+  const [properties, setProperties] = useState([])
+
+  const fetchData = async () => {
+    const res = await getProperties()
+    setProperties([...res])
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <div className={styles.container}>
       <div className={styles.sectionTitle}>
@@ -11,36 +24,11 @@ export default function AllProperties({ data }) {
       </div>
 
       <div className={styles.flexContainer}>
-        {data.map(property => {
+        {properties.map(property => {
           return (
             <div className={styles.info}>
-              <div className={styles.imageContainer}>
-                <Image src={`/properties/${property.image}`} height={850} width={1100} />
-                <div className={styles.progress}>
-                  <div className={styles.propertyType}>
-                    <div className={styles.type}>
-                      {property.type}
-                    </div>
-                  </div>
-                  <div className={styles.progressValue}>
-                    <div className={styles.value}>
-                      {property.investmentGained / property.investmentNeeded * 100}%
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.propertyDetails}>
-                <h3>{property.name}</h3>
-                <h4>{property.address}</h4>
-                <p>
-                  {property.description}
-                </p>
-                <Link href={`/properties/${encodeURIComponent(property.id)}`}>
-                  <div className={styles.propertyButton}>
-                    Learn More
-                  </div>
-                </Link>
-              </div>
+              Name:
+              {property.name}
             </div>
           )
         })}
@@ -144,3 +132,5 @@ export default function AllProperties({ data }) {
     </div>
   )
 }
+
+export default AllProperties
