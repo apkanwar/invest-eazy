@@ -3,9 +3,9 @@ import Head from 'next/head'
 import BannerNav from '../../components/banner_nav'
 import AllProperties from '../../components/propertiesPage/all_properties'
 import Footer from '../../components/footer'
-import { properties } from '../../data/data'
+// import { properties } from '../../data/data'
 
-export default function Properties( { properties } ) {
+export default function Properties() {
   return (
     <>
       <Head>
@@ -15,19 +15,16 @@ export default function Properties( { properties } ) {
       </Head>
 
       <BannerNav page='properties' />
-      <AllProperties data={ properties } />
+      <AllProperties />
       <Footer />
     </>
   )
 }
 
-export async function getStaticProps() {
-  // const response = await fetch('http://localhost:4000/properties')
-  // const data = await response.json();
-
-  return {
-    props: {
-      properties: properties
-    }
-  }
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       properties: properties
+//     }
+//   }
+// }

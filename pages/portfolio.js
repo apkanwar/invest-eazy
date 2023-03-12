@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { portfolioData } from '../data/portfolioData'
+// import { portfolioData } from '../data/portfolioData'
 
 import Navbar from '../components/navbar'
 import PortfolioContent from '../components/portfolioContent'
 
-export default function Portfolio({ portfolioData }) {
+export default function Portfolio() {
   return (
     <>
       <Head>
@@ -14,15 +14,15 @@ export default function Portfolio({ portfolioData }) {
       </Head>
 
       <Navbar login={true} />
-      <PortfolioContent portfolioData={ portfolioData } />
+      <PortfolioContent />
     </>
   )
 }
 
-export async function getStaticProps() {
-  return {
-    props: {
-      portfolioData: portfolioData
-    }
-  }
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       portfolioData: portfolioData
+//     }
+//   }
+// }

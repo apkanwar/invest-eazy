@@ -25,3 +25,7 @@ export default function PortfolioContent({ portfolioData }) {
     </div>
   )
 }
+
+
+// Wasn't sure which class to use for investor protfolio
+// I don't need investor info, if I use investorApi, will it also give me investor portfolio or just basic info about investor 

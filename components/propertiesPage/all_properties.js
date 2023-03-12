@@ -2,8 +2,18 @@ import styles from '../../styles/all_properties.module.css'
 import Image from 'next/image'
 import HotelImage from '../../public/hotel.webp'
 import Link from 'next/link'
+import PropertyApi from '../../api'
 
-export default function AllProperties({ data }) {
+export default function AllProperties() {
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    const api = new PropertyApi();
+    api.getAll().then(listings => {
+      setListings(listings);
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.sectionTitle}>
@@ -11,31 +21,32 @@ export default function AllProperties({ data }) {
       </div>
 
       <div className={styles.flexContainer}>
-        {data.map(property => {
+        {/* Need to set mapping to max 3 properties (See All button goes either to login or marketplace) */}
+        {listings.map(listing => {
           return (
             <div className={styles.info}>
               <div className={styles.imageContainer}>
-                <Image src={`/properties/${property.image}`} height={850} width={1100} />
+                <Image src={`/properties/${listing.image}`} height={850} width={1100} />
                 <div className={styles.progress}>
                   <div className={styles.propertyType}>
                     <div className={styles.type}>
-                      {property.type}
+                      {listing.type}
                     </div>
                   </div>
                   <div className={styles.progressValue}>
                     <div className={styles.value}>
-                      {property.investmentGained / property.investmentNeeded * 100}%
+                      {listing.investmentGained / listing.investmentNeeded * 100}%
                     </div>
                   </div>
                 </div>
               </div>
               <div className={styles.propertyDetails}>
-                <h3>{property.name}</h3>
-                <h4>{property.address}</h4>
+                <h3>{listing.name}</h3>
+                <h4>{listing.address}</h4>
                 <p>
-                  {property.description}
+                  {listing.description}
                 </p>
-                <Link href={`/properties/${encodeURIComponent(property.id)}`}>
+                <Link href={`/properties/${encodeURIComponent(listing.id)}`}>
                   <div className={styles.propertyButton}>
                     Learn More
                   </div>

@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import React, { useState } from "react"
 import styles from '../styles/loginDetails.module.css'
+import AuthApi from '../api'
 
 export default function LoginDetails() {
   const [authState, onStateChange] = useState('signIn');
@@ -18,12 +19,24 @@ export default function LoginDetails() {
     })
   }
 
+  // Handle SignIn through API
   const router = useRouter();
   const signInClick = async (event) => {
     event.preventDefault();
     alert("Signed In");
+    const api = new AuthApi();
+    api.login(formData.email, formData.password).then(data => {
+      router.push('/portfolio');
+    });
+  }
 
-    router.push('/portfolio');
+  // Handle Signup through API, redirects to login page to reenter new credentails
+  const signUpClick = async (event) => {
+    event.preventDefault();
+    const api = new AuthApi();
+    api.register(formData.email, formData.password, formData,name).then(data => {
+      router.push('/login');
+    });
   }
 
   return (
@@ -60,7 +73,7 @@ export default function LoginDetails() {
             <span className={styles.highlight}>Get</span> Started
           </div>
 
-          <form onSubmit={e => signInClick(e)}>
+          <form onSubmit={e => signUpClick(e)}>
             <label for="name" className={styles.label}>Full Name</label>
             <input id="name" type="text" name="name" className={styles.input} value={formData.name} onChange={e => handleInputChange("name", e?.target?.value || "",)} />
 

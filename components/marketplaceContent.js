@@ -4,6 +4,7 @@ import styles from '../styles/marketplaceContent.module.css';
 import List from './miniComponents/list';
 import { FormControl, InputLabel, Select, MenuItem, Autocomplete, TextField, InputBase } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import PropertyApi from '../api'
 
 const StyledTextBox = styled(TextField)({
   [`& fieldset`]: {
@@ -18,7 +19,7 @@ const sortOptions = [
   { label: 'Closing Date (Closest First)', value: 4 }
 ];
 
-export default function MarketplaceContent({ data }) {
+export default function MarketplaceContent() {
   const [housesToShow, setHousesToShow] = useState([]);
   const [selectedSortValue, setSelectedSortValue] = useState('0');
   const [searchTerm, setSearchTerm] = useState('');
@@ -36,27 +37,29 @@ export default function MarketplaceContent({ data }) {
   };
 
   const sortandSearchListings = () => {
+    let pAPI = new PropertyApi().getAll();
+
     let sortedListings = [];
 
     switch (selectedSortValue) {
       case 1:
-        sortedListings = [...data].sort((a, b) => b.minInvestment - a.minInvestment);
+        sortedListings = [...pAPI].sort((a, b) => b.minInvestment - a.minInvestment);
         console.log(sortedListings)
         break;
       case 2:
-        sortedListings = [...data].sort((a, b) => a.minInvestment - b.minInvestment);
+        sortedListings = [...pAPI].sort((a, b) => a.minInvestment - b.minInvestment);
         console.log(sortedListings)
         break;
       case 3:
-        sortedListings = [...data].sort((a, b) => new Date(b.closingDate) - new Date(a.closingDate));
+        sortedListings = [...pAPI].sort((a, b) => new Date(b.closingDate) - new Date(a.closingDate));
         console.log(sortedListings)
         break;
       case 4:
-        sortedListings = [...data].sort((a, b) => new Date(a.closingDate) - new Date(b.closingDate));
+        sortedListings = [...pAPI].sort((a, b) => new Date(a.closingDate) - new Date(b.closingDate));
         console.log(sortedListings)
         break;
       default:
-        sortedListings = [...data].sort((a, b) => a.id - b.id);
+        sortedListings = [...pAPI].sort((a, b) => a.id - b.id);
         console.log(sortedListings)
         break;
     }

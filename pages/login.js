@@ -15,7 +15,7 @@ export default function Login() {
       </Head>
 
       <Navbar login={false} />
-      <LoginDetails/>
+      <LoginDetails />
       <Footer />
     </>
   )

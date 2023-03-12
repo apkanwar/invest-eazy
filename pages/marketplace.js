@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { properties } from '../data/data'
+// import { properties } from '../data/data'
 
 import Navbar from '../components/navbar'
 import MarketplaceContent from '../components/marketplaceContent'
 
-export default function Marketplace( { properties } ) {
+export default function Marketplace() {
   return (
     <>
       <Head>
@@ -14,18 +14,15 @@ export default function Marketplace( { properties } ) {
       </Head>
 
       <Navbar login={true} />
-      <MarketplaceContent data={ properties } />
+      <MarketplaceContent/>
     </>
   )
 }
 
-export async function getStaticProps() {
-  // const response = await fetch('http://localhost:4000/properties')
-  // const data = await response.json();
-
-  return {
-    props: {
-      properties: properties
-    }
-  }
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       properties: PropertyApi
+//     }
+//   }
+// }
