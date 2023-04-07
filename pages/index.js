@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/pages.module.css'
+// import PropertyApi from '../api'
+import { useEffect } from 'react'
 
 import Navbar from '../components/navbar'
 import HomeBanner from '../components/homePage/banner'
@@ -10,6 +12,13 @@ import HowItWorks from '../components/homePage/full_card'
 import Footer from '../components/footer'
 
 export default function Home() {
+  useEffect(() => {
+    const api = new PropertyApi();
+    api.getAll().then(listings => {
+      console.log(listings);
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -27,4 +36,30 @@ export default function Home() {
       <Footer />
     </>
   )
+}
+
+class BaseApi {
+  constructor(baseUrl, token) {
+    this.baseUrl = 'https://invest-easy-backend.herokuapp.com/api';
+    // this.token = token;
+  }
+
+  async request(method, url, body) {
+    const response = await fetch(`${this.baseUrl}${url}`, {
+      method,
+      // headers: {
+      //   'Content-Type': 'application/json',
+      //   'Authorization': `Bearer ${this.token}`
+      // },
+      body: body ? JSON.stringify(body) : undefined
+    });
+    const data = await response.json();
+    return data;
+  }
+}
+
+class PropertyApi extends BaseApi {
+  async getAll() {
+    return this.request('GET', '/property/get_listings');
+  }
 }

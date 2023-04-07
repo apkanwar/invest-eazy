@@ -1,17 +1,17 @@
 // Base class that provides common functionality to other API classes
 class BaseApi {
   constructor(baseUrl, token) {
-    this.baseUrl = baseUrl;
-    this.token = token;
+    this.baseUrl = 'https://invest-easy-backend.herokuapp.com/api';
+    // this.token = token;
   }
 
   async request(method, url, body) {
     const response = await fetch(`${this.baseUrl}${url}`, {
       method,
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.token}`
-      },
+      // headers: {
+      //   'Content-Type': 'application/json',
+      //   'Authorization': `Bearer ${this.token}`
+      // },
       body: body ? JSON.stringify(body) : undefined
     });
     const data = await response.json();
@@ -63,7 +63,7 @@ class InvestorApi extends BaseApi {
 // Class that handles property-related APIs
 class PropertyApi extends BaseApi {
   async getAll() {
-    return this.request('GET', '/properties');
+    return this.request('GET', '/property/get_listings');
   }
 }
 
