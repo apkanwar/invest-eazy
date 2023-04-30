@@ -1,7 +1,8 @@
 // Base class that provides common functionality to other API classes
 class BaseApi {
-  constructor(baseUrl, token) {
-    this.baseUrl = 'https://invest-easy-backend.herokuapp.com/api';
+  constructor() {
+    // this.baseUrl = "https://invest-easy-backend.herokuapp.com/api";
+    this.baseUrl = "http://127.0.0.1:8000/api";
     // this.token = token;
   }
 
@@ -12,7 +13,7 @@ class BaseApi {
       //   'Content-Type': 'application/json',
       //   'Authorization': `Bearer ${this.token}`
       // },
-      body: body ? JSON.stringify(body) : undefined
+      body: body ? JSON.stringify(body) : undefined,
     });
     const data = await response.json();
     return data;
@@ -22,17 +23,17 @@ class BaseApi {
 // Class that handles authentication-related APIs
 class AuthApi extends BaseApi {
   async register(email, password, name) {
-    return this.request('POST', '/auth/register', { email, password, name });
+    return this.request("POST", "/auth/register", { email, password, name });
   }
 
   async login(email, password) {
-    const data = await this.request('POST', '/auth/login', { email, password });
+    const data = await this.request("POST", "/auth/login", { email, password });
     this.token = data.token;
     return data;
   }
 
   async logout() {
-    await this.request('POST', '/auth/logout');
+    await this.request("POST", "/auth/logout");
     this.token = null;
   }
 }
@@ -40,40 +41,52 @@ class AuthApi extends BaseApi {
 // Class that handles investor-related APIs
 class InvestorApi extends BaseApi {
   async getAll() {
-    return this.request('GET', '/investors');
+    return this.request("GET", "/investors");
   }
 
   async create(name, email, bankAccount) {
-    return this.request('POST', '/investors', { name, email, bank_account: bankAccount });
+    return this.request("POST", "/investors", {
+      name,
+      email,
+      bank_account: bankAccount,
+    });
   }
 
   async get(id) {
-    return this.request('GET', `/investors/${id}`);
+    return this.request("GET", `/investors/${id}`);
   }
 
   async update(id, name, email, bankAccount) {
-    return this.request('PUT', `/investors/${id}`, { name, email, bank_account: bankAccount });
+    return this.request("PUT", `/investors/${id}`, {
+      name,
+      email,
+      bank_account: bankAccount,
+    });
   }
 
   async delete(id) {
-    return this.request('DELETE', `/investors/${id}`);
+    return this.request("DELETE", `/investors/${id}`);
   }
 }
 
 // Class that handles property-related APIs
-class PropertyApi extends BaseApi {
+export class PropertyApi extends BaseApi {
   async getAll() {
-    return this.request('GET', '/property/get_listings');
+    return this.request("GET", "/property/get_listings");
   }
 }
 
 // Class that handles event-related APIs
 class EventApi extends BaseApi {
   async getActive() {
-    return this.request('GET', '/events/active');
+    return this.request("GET", "/events/active");
   }
 
   async preApprove(eventId, investorId, amount) {
-    return this.request('POST', '/pre-approve', { event_id: eventId, investor_id: investorId, amount });
+    return this.request("POST", "/pre-approve", {
+      event_id: eventId,
+      investor_id: investorId,
+      amount,
+    });
   }
 }
