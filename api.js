@@ -1,8 +1,8 @@
 // Base class that provides common functionality to other API classes
 class BaseApi {
   constructor() {
-    // this.baseUrl = "https://invest-easy-backend.herokuapp.com/api";
-    this.baseUrl = "http://127.0.0.1:8000/api";
+    this.baseUrl = "https://invest-easy-backend.herokuapp.com/api";
+    // this.baseUrl = "http://127.0.0.1:8000/api";
     // this.token = token;
   }
 
