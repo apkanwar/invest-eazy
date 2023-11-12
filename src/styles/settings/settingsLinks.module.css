@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  max-width: 950px;
+  margin: auto;
+  padding: 0 2rem 64px;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  background-color: white;
+  margin: 0 auto;
+  flex-flow: column wrap;
+  padding: 48px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.link {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 28px 48px;
+  margin: 12px 0;
+  font-size: 16px;
+  align-items: center;
+}
+
+.linkDelete {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 28px 48px;
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  color: red;
+}
+
+.linkLogout {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 28px 48px;
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  color: #FFC000;
+}
+
+.link:hover, .linkDelete:hover, .linkLogout:hover {
+  cursor: pointer;
+  background: lightgray;
+  border: 2px solid black;
+}
+
+.linkArrow {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: auto;
+}

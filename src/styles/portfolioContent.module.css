@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.pInvestment {
+  margin-left: auto;
+  font-size: 20px;
+}
+.pIRR {
+  margin-left: 4em;
+  font-size: 20px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2em 3em;
+  font-weight: 700;
+}
+.header div, .pInvestment, .pIRR {
+  min-width: 180px;
+  max-width: 180px;
+  text-align: end;
+}

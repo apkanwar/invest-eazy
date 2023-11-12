@@ -1,0 +1,33 @@
+.activity {
+  width: 320px;
+  min-width: 320px;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  user-select: none;
+  background-color: white;
+}
+.activity:hover {
+  background-color: rgba(173, 216, 230, 0.4);
+  cursor: pointer;
+}
+
+.accordianBlock {
+  max-width: 320px;
+  display: flex;
+  padding: 1rem 2rem 2rem;
+  flex-direction: column;
+  user-select: none;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  gap: 10px;
+}
+@media (min-width: 960px) {
+  .activity {
+    width: 375px;
+  }
+
+  .accordianBlock {
+    max-width: 375px;
+  }
+}

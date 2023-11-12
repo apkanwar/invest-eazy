@@ -1,29 +1,28 @@
 {
-  "name": "invest-eazy",
+  "name": "next-navbar",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "serve-json": "json-server --watch db.json --port 4000"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.0",
-    "@mui/styles": "^5.11.12",
-    "json-server": "^0.17.0",
-    "next": "12.2.5",
-    "nextjs-progressbar": "0.0.14",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.1.4",
+    "@mui/icons-material": "^5.14.15",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "next": "13.4.3",
+    "postcss": "8.4.23",
     "react": "18.2.0",
-    "react-circular-progressbar": "^2.1.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.21.0",
-    "eslint-config-next": "12.2.5"
+    "react-dom": "18.2.0",
+    "react-toggle-dark-mode": "^1.1.1",
+    "tailwindcss": "3.3.2"
   }
 }
